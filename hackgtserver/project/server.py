@@ -1,9 +1,11 @@
 from flask import Flask, request, json
 from . import util, database as db
 
-app = Flask(__name__)
+import asyncio
 
-@api.route('/users/create', methods=['POST'])
+api = Flask(__name__)
+
+@api.route('/user/create', methods=['POST'])
 def create_username():
     username = request.args.get('username', type = str)
     password = request.args.get('password', type = str)
@@ -14,5 +16,16 @@ def create_username():
     else:
         return json.dumps({"success": False}), 500
 
+@api.route('/user/exist', methods=['POST'])
+def is_username_exists():
+    username = request.args.get('username', type = str)
+    success = db.is_user_exists(username)
+    if success:
+        return json.dumps({"success": True}), 200
+    elif success is None:
+        return json.dumps({"success": False}), 500
+    else:
+        return json.dumps({"success": False}), 200
+
 if __name__ == '__main__':
-    app.run()
+    api.run()
