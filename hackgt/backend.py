@@ -1,0 +1,27 @@
+from flask import Flask
+from PIL import Image
+import pytesseract
+import argparse
+import os
+import cv2
+
+app = Flask(__name__)
+
+@app.route('/')
+@app.route('/index')
+def index():
+    return 'Hello, World!'
+
+# load the image as a PIL/Pillow image, apply OCR, and then delete
+# the temporary file
+# text = pytesseract.image_to_string(Image.open(filename))
+# os.remove(filename)
+# print(text)
+
+
+
+
+
+
+if __name__ == '__main__':
+    app.run()

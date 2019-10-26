@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "image-to-text-257102",
+  "private_key_id": "d3747d27e8895fa4e4a246afa213f2b9d26365a7",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvAIBADANBgkqhkiG9w0BAQEFAASCBKYwggSiAgEAAoIBAQDJk4I1qRIdQgHn\nkAloz7VsCXkTqYUgu0HE2+DPOk0kvz83YwAheaQLNrxBXWR4VIJIOvug1RI0wMui\ng6UafP8CKzbi/MCbKfsoqiqfYpu1L0+JBUXn9TNgtVEw1j/t2xvYtlFe2puWcvQU\nx06CtoRsxHafcn0DSAF6oapB2pEj4koj3wqOWJwO24my/9ZodN1OS7N5gPCl0pXy\nNU6S5EdtJaxwRMU8u78Ki3L+lbbAZH9AJ1fEpm2YOmjVXTVWTYeMvIznKEohscxT\n8f+231/dE2WvP0Ql7+bePcvEaRu3ZJau5XB8CkMfHeJFCyLy9V9/3l83vVQU0E1g\ngTVwq7z7AgMBAAECggEAEiGxmbAOkBEq6LBdGE9uqzwi5vDdp7cQUGvSyfEdlUua\nnRnLnjc52URgJKUI74XyfhrIHYxs6c/ZwVGEHWDW81P9yOchUBOzotHDqbiN9vs9\ndT7DLf0xVOaaWgE7mOKXm6OyqAyT6DGI4QGYf0t5l+sIHImI0y277FL0ZJ4LZiXA\nmNDbXZeASAlgMWIBJr3mvVYI5obfOCNe7mM18sWM3Mt/JdDREa/ltSAb3GIIAB7F\nLlqVGUoxiaMYPVosklw19xMSFL9NcV8XU9zZgEnrOIa+xN+vz+sU5uRFvMpnMQYP\nigMnYKPIYXaJa1n7vbTzVhAzH8xeCp72xAQP7Gr9uQKBgQD8/aDpaeTZ/yFMJCGI\n4rZFrKUTtRllb5QUt+MQ9H7j+XPBBGIYVQTTTGKNbbMup4NyWL2VLJ5zBM1OvCt7\nZDbQYtdA6jtvDUSyYoyNyHEamuylcR3+3AmtWywvhJ6Ywnvw27jeNobZ6UWHfa9E\n/pvxsOTRi9rGe6Ge55a4MRJqbQKBgQDL+VHhdZ9SCnHAXpzhDcEiMg3h4a8UF5pO\nQWTE79e/J2wXkp+hM5UTCv1MCA1gh2jrVGybTF6JHATXBz23JKWTMarhmcP7qfbd\nGq/zCGGyt7VwIxlLNjtOJAszBhIqkKAwDHeYfZH1QCQNZbfiT4Pl+CnV7vUwqndG\nKZU+0tGkBwKBgF5/3rtRcsp7IlTuqhgXlz4vXvodi374TrfueEK9ESjW5QYUPRAZ\nsdO7lJR/hY7Hw7HSs/4kzIrqIEZow1Uz+cWdJgp5c/nnWuHHLflIBfeKJxslRa8N\nQhAfHkIhp5woCWPOrx9R/s0m9XHG4NFEybtd+BrNwsqhI53Xo9Tpf5eBAoGAVR0F\nSNI/GAnZq48PYW3O4IkId/AnkXfD4NGyzebTHSXDGhcJ20dd9mNIjPhzNItsgX5q\nD2ePryDs+BlCbHCzUreP+bGjMRmcNGkVcJFXyy6TXGaZAGRx3Mp3jeQDopVU8pfR\nM+V6CV+pa5m9YIcTn9utAWNEFvma6cEiUOPBrPMCgYAwDkP7i5iKEHYyzfPPUfe6\nuQXHi6NcM/Xs/3dOVDZyx7SSKWAnBCGhJPXwca4tOhJgLC9f83MuDrFnTDvb5x36\no5C6m1RaWLa7hJ2Ju8BbxWz3sWscGhojuW5XzILBRR4EoS/RFA3I2EnbWE07LKBy\napHH0gPrcwHBiupjZ7xbcQ==\n-----END PRIVATE KEY-----\n",
+  "client_email": "hackgt@image-to-text-257102.iam.gserviceaccount.com",
+  "client_id": "112142412352239471969",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/hackgt%40image-to-text-257102.iam.gserviceaccount.com"
+}
