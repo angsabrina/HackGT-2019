@@ -10,6 +10,7 @@ mysql_dbname = ''
 
 INSERT_INTO_DB_SQL = 'INSERT INTO Users(username, password) VALUES(%s, %s);'
 SELECT_USER_EXISTS_SQL = 'SELECT id FROM Users WHERE username = %s;'
+SELECT_PASSWORD_SQL = 'SELECT password FROM Users WHERE username = %s;'
 # ================
 
 def create_user(username, hashed_password):
@@ -29,6 +30,23 @@ def create_user(username, hashed_password):
         cursor = cnx.cursor()
         cursor.execute(INSERT_INTO_DB_SQL, (username, hashed_password))
         return True
+    finally:
+        cnx.commit()
+        cursor.close()
+        
+def get_user_password(username):
+    if not check_mysql_connection():
+        return False
+    global cnx
+    try:
+        cursor = cnx.cursor()
+        # first let's check if the username exists
+        cursor.execute(SELECT_PASSWORD_SQL, (username))
+        row = cursor.fetchone()
+        if row:
+            return row
+            
+        return None
     finally:
         cnx.commit()
         cursor.close()
