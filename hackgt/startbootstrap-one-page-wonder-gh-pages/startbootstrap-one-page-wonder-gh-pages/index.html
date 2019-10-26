@@ -50,9 +50,10 @@
         <h2 class="masthead-subheading mb-0">Make your mark</h2>
         <br>
         <br>
-        <a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Upload</a>
-        <br>
-        <br>
+        <form method="post">
+          <input type="file" enctype="multipart/form-data"/>
+          <input type="submit" class="btn btn-primary btn-xl rounded-pill mt-5" value="Upload File" name="submit" />
+        </form>
         <h4 class="masthead-supersubheading mb-0">Upload your past receipt</h4>
       </div>
     </div>
@@ -127,6 +128,8 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </body>
 
