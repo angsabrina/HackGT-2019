@@ -1,6 +1,7 @@
 import bcrypt
 import jwt
 import datetime
+import os
 
 SECRET_KEY = os.getenv('PROJECT_HACKGT_SECRET_KEY', 'key_not_ransom')
 

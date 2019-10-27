@@ -11,6 +11,9 @@ mysql_dbname = ''
 INSERT_INTO_DB_SQL = 'INSERT INTO Users(username, password) VALUES(%s, %s);'
 SELECT_USER_EXISTS_SQL = 'SELECT id FROM Users WHERE username = %s;'
 SELECT_PASSWORD_SQL = 'SELECT password FROM Users WHERE username = %s;'
+
+INSERT_IMAGE_INTO_DB_SQL = 'INSERT INTO Images(id, name, message, photo, processed) ' \
+    'VALUES((SELECT id FROM Users WHERE username = %s), %s, %s, %s, %s);'
 # ================
 
 def create_user(username, hashed_password):
@@ -82,6 +85,18 @@ def check_mysql_connection():
             return False
     finally:
         cursor.close()
+        
+def insert_image(username, name, text, image, processed):
+    if not check_mysql_connection():
+        return False
+    global cnx
+    try:
+        cursor = cnx.cursor()
+        cursor.execute(INSERT_IMAGE_INTO_DB_SQL, (username, name, text, image, processed))
+    finally:
+        cnx.commit()
+        cursor.close()
+    return True
         
 def connect():
     try:

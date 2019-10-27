@@ -58,7 +58,11 @@ def upload_image():
     if auth_token:
         resp = util.decode_auth_token(auth_token)
         if not isinstance(resp, str):
-            user = User.query.filter_by(id=resp).first()
+            file = request.files # image of receipt
+            photo = file['photo']
+            name = photo.filename
+            # now we want to save the file.
+            #db.insert_image(resp, name, None, photo.read(), False)
             responseObject = {
                 'success': True
             }
@@ -74,6 +78,16 @@ def upload_image():
                 'message': 'Provide a valid auth token.'
             }
         return make_response(jsonify(responseObject)), 401
+        
+@api.route('/test/img/upload', methods=['POST'])
+def upload_image_test():
+    file = request.files # image of receipt
+    photo = file['photo']
+    name = photo.filename
+    responseObject = {
+                'success': True
+            }
+    return make_response(jsonify(responseObject)), 200
 
 if __name__ == '__main__':
     api.run()

@@ -1,11 +1,13 @@
 $('#myFormSubmit').click(function (e) {
     var formdata = new FormData()
-    formdata.append('photo',$('#inputimage')[0].files[0])
+    var file = $('#inputimage')[0].files[0]
+    formdata.append('photo',file)
+    console.log(formdata)
     $.ajax({
         method : 'POST',
         processData : false,
         contentType : false,
-        url : 'http://localhost:3000/home',
+        url : 'http://localhost:5000/test/img/upload',
         data : formdata,
         success : function(o){
             //callback here on success
